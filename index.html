@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Firdaus | Personal Profile & Portfolio TJKT</title>
+  <meta name="description" content="Website Biodata Pribadi dan Portofolio Digital Muhammad Firdaus (Danz / Zarr / Ditz) - Pelajar TJKT, Gamer, Calon Triliuner & Web Developer.">
+  <meta name="keywords" content="Muhammad Firdaus, Biodata, Portofolio, TJKT, SMK Muhammadiyah 1 Palembang, Esport, Web Developer">
+  <meta name="author" content="Muhammad Firdaus">
+
+  <!-- Google Fonts: Orbitron for futuristic titles & Plus Jakarta Sans for clean typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-neon-purple">
+
+  <!-- ==================== BACKGROUND CANVAS ==================== -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="cyber-grid-overlay"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- ==================== LOADING SCREEN ==================== -->
+  <div id="preloader" class="preloader">
+    <div class="loader-content">
+      <div class="cyber-hexagon">
+        <span class="cyber-letter">F</span>
+        <div class="hex-ring"></div>
+      </div>
+      <h2 class="loader-title">SYSTEM INITIALIZATION</h2>
+      <div class="loader-console" id="loader-console">> Booting FIRDAUS_CORE_v2.6 ...</div>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="preloader-progress"></div>
+      </div>
+      <div class="loader-meta">
+        <span id="loader-percentage">0%</span>
+        <span>STATUS: SYNCHRONIZING BIODATA</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TOP SYSTEM BAR ==================== -->
+  <div class="top-system-bar">
+    <div class="container system-bar-inner">
+      <div class="system-status">
+        <span class="status-dot pulsing"></span>
+        <span class="status-text">SYSTEM ONLINE &bull; PALEMBANG, ID</span>
+      </div>
+      
+      <!-- REALTIME DIGITAL CLOCK -->
+      <div class="digital-clock-wrapper" id="digital-clock-wrapper">
+        <i class="fa-regular fa-clock clock-icon"></i>
+        <span id="digital-date">Minggu, 08 Nov 2026</span>
+        <span class="clock-separator">&bull;</span>
+        <span id="digital-clock" class="digital-clock">00:00:00 WIB</span>
+      </div>
+
+      <div class="system-actions">
+        <!-- AUDIO BGM CONTROLLER -->
+        <div class="audio-control-pill" id="audio-toggle-btn" title="Nyalakan / Matikan Musik Latar">
+          <div class="equalizer-bars" id="equalizer-bars">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+            <span class="bar bar-4"></span>
+          </div>
+          <span class="audio-label" id="audio-label">BGM: OFF</span>
+        </div>
+
+        <!-- THEME TOGGLE -->
+        <button id="theme-toggle" class="icon-btn" title="Ganti Mode Tema (Dark / Cyber Neon)">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+
+        <!-- ADMIN DASHBOARD TRIGGER -->
+        <button id="open-admin-btn" class="admin-pill-btn" title="Buka Dashboard Admin untuk Edit Biodata">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>ADMIN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN NAVIGATION ==================== -->
+  <header class="main-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-box">DF</span>
+        <div class="brand-text">
+          <span class="brand-name">FIRDAUS</span>
+          <span class="brand-tag">TJKT &bull; GAMER</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAV LINKS -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Beranda</a></li>
+          <li class="nav-item"><a href="#biodata" class="nav-link"><i class="fa-solid fa-id-card"></i> Biodata</a></li>
+          <li class="nav-item"><a href="#pendidikan" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Pendidikan</a></li>
+          <li class="nav-item"><a href="#hobi" class="nav-link"><i class="fa-solid fa-heart-pulse"></i> Minat & Hobi</a></li>
+          <li class="nav-item"><a href="#game" class="nav-link"><i class="fa-solid fa-gamepad"></i> Game</a></li>
+          <li class="nav-item"><a href="#pengalaman" class="nav-link"><i class="fa-solid fa-award"></i> Pengalaman</a></li>
+          <li class="nav-item"><a href="#keahlian" class="nav-link"><i class="fa-solid fa-bolt"></i> Keahlian</a></li>
+          <li class="nav-item"><a href="#galeri" class="nav-link"><i class="fa-solid fa-images"></i> Galeri</a></li>
+          <li class="nav-item"><a href="#kontak" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA BUTTON -->
+      <div class="nav-action-wrapper">
+        <a href="#biodata" class="btn btn-outline-glow btn-sm">
+          <span>Lihat Profil</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Buka Menu Navigasi">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <!-- STATUS PILL -->
+        <div class="hero-badge reveal-item">
+          <span class="badge-dot"></span>
+          <span class="badge-text">READY FOR TOURNAMENTS & TECH PROJECTS</span>
+        </div>
+
+        <h1 class="hero-title reveal-item">
+          Halo, Saya <br>
+          <span class="neon-text glow-purple" id="display-hero-name">MUHAMMAD FIRDAUS</span>
+        </h1>
+
+        <!-- DYNAMIC TYPING SUBTITLE -->
+        <div class="typewriter-box reveal-item">
+          <span class="prefix">Dikenal sebagai:</span>
+          <span class="typewriter-text" id="typewriter-text"></span>
+          <span class="cursor">&vert;</span>
+        </div>
+
+        <p class="hero-desc reveal-item" id="display-hero-intro">
+          Pelajar berdedikasi tinggi di SMK Muhammadiyah 1 Palembang Jurusan TJKT (Teknik Jaringan Komputer & Telekomunikasi). Menggabungkan semangat kepemimpinan, keahlian networking, coding, serta ketajaman strategi sebagai pelatih esport untuk melangkah menjadi seorang triliuner masa depan.
+        </p>
+
+        <!-- MOTTO CALLOUT -->
+        <div class="hero-motto-card reveal-item">
+          <div class="motto-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <div class="motto-content">
+            <span class="motto-label">Motto Hidup</span>
+            <p class="motto-quote" id="display-hero-motto">
+              "Jangan berhenti ketika lelah. Berhentilah ketika selesai."
+            </p>
+          </div>
+        </div>
+
+        <!-- HERO BUTTONS -->
+        <div class="hero-actions reveal-item">
+          <a href="#biodata" class="btn btn-primary-neon">
+            <i class="fa-solid fa-user-astronaut"></i>
+            <span>Biodata Lengkap</span>
+          </a>
+          <a href="#kontak" class="btn btn-secondary-neon">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Hubungi Saya</span>
+          </a>
+          <button class="btn btn-glass" id="hero-quick-edit-btn">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <span>Edit Biodata</span>
+          </button>
+        </div>
+
+        <!-- KEY STATS -->
+        <div class="hero-stats-row reveal-item">
+          <div class="stat-pill">
+            <span class="stat-number">2010</span>
+            <span class="stat-desc">Kelahiran</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-number">TJKT</span>
+            <span class="stat-desc">Kompetensi</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-number">COACH</span>
+            <span class="stat-desc">Esport Tactician</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-number">FUTURE</span>
+            <span class="stat-desc">Triliuner</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO AVATAR DISPLAY -->
+      <div class="hero-visual reveal-item">
+        <div class="avatar-card-wrapper">
+          <div class="avatar-glow-ring"></div>
+          <div class="avatar-frame">
+            <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=700&q=80" 
+                 alt="Foto Muhammad Firdaus" 
+                 id="display-hero-avatar" 
+                 class="hero-avatar-img">
+            
+            <div class="cyber-corner corner-tl"></div>
+            <div class="cyber-corner corner-tr"></div>
+            <div class="cyber-corner corner-bl"></div>
+            <div class="cyber-corner corner-br"></div>
+
+            <div class="avatar-floating-badge badge-top">
+              <i class="fa-solid fa-shield-cat"></i>
+              <span>IGN: DANZ &bull; ZARR</span>
+            </div>
+
+            <div class="avatar-floating-badge badge-bottom">
+              <i class="fa-solid fa-network-wired"></i>
+              <span>SMK MUH 1 PLG</span>
+            </div>
+          </div>
+
+          <!-- AVATAR CONTROLS -->
+          <div class="avatar-meta-card">
+            <div class="meta-item">
+              <span class="meta-title">STATUS PELAJAR</span>
+              <span class="meta-val">SMK TJKT Aktif</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-title">CITA-CITA</span>
+              <span class="meta-val text-neon-gold"><i class="fa-solid fa-gem"></i> TRILIUNER</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCROLL DOWN INDICATOR -->
+    <a href="#biodata" class="scroll-indicator" aria-label="Scroll ke Biodata">
+      <span class="scroll-text">EXPLORE PROFILE</span>
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- ==================== BIODATA SECTION ==================== -->
+  <section class="section biodata-section" id="biodata">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag"><i class="fa-solid fa-id-badge"></i> IDENTITAS RESMI</div>
+        <h2 class="section-title">Biodata <span class="neon-text">Pribadi</span></h2>
+        <p class="section-subtitle">Profil lengkap, data identitas personal, latar belakang, dan visi masa depan.</p>
+        <div class="header-divider"></div>
+      </div>
+
+      <div class="biodata-grid">
+        <!-- HOLOGRAPHIC ID CARD (LEFT) -->
+        <div class="cyber-id-card glass-panel reveal-item">
+          <div class="id-card-header">
+            <div class="chip-graphic">
+              <div class="chip-circuit"></div>
+            </div>
+            <div class="id-card-issuer">
+              <span>CYBER PASS ID</span>
+              <span class="id-code">#FRDS-2010-TJKT</span>
+            </div>
+          </div>
+
+          <div class="id-photo-area">
+            <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=500&q=80" 
+                 alt="Foto ID Firdaus" 
+                 id="display-card-avatar"
+                 class="id-photo">
+            <div class="scanline"></div>
+          </div>
+
+          <div class="id-details">
+            <h3 class="id-name" id="display-card-name">MUHAMMAD FIRDAUS</h3>
+            <span class="id-role" id="display-card-nicknames">DANZ &bull; ZARR &bull; DITZ</span>
+            <div class="id-barcode">
+              <span class="barcode-lines"></span>
+              <span class="barcode-number">2010-07-02-PALEMBANG-TJKT</span>
+            </div>
+          </div>
+
+          <div class="id-card-footer">
+            <button class="btn btn-outline-sm" id="btn-copy-biodata">
+              <i class="fa-regular fa-copy"></i> Salin Ringkasan Bio
+            </button>
+            <button class="btn btn-primary-sm" id="btn-print-bio">
+              <i class="fa-solid fa-print"></i> Cetak / Simpan PDF
+            </button>
+          </div>
+        </div>
+
+        <!-- DETAILED INFO LIST (RIGHT) -->
+        <div class="bio-spec-panel glass-panel reveal-item">
+          <div class="spec-header">
+            <div class="spec-title-group">
+              <i class="fa-solid fa-address-card spec-main-icon"></i>
+              <div>
+                <h3 class="spec-title">Data Informasi Personal</h3>
+                <span class="spec-sub">Terverifikasi &amp; Terintegrasi Realtime</span>
+              </div>
+            </div>
+            <span class="badge badge-purple">PELAJAR &amp; GAMER</span>
+          </div>
+
+          <div class="spec-table-grid">
+            <!-- ITEM 1 -->
+            <div class="spec-cell">
+              <div class="spec-icon"><i class="fa-solid fa-user"></i></div>
+              <div class="spec-content">
+                <span class="spec-label">Nama Lengkap</span>
+                <span class="spec-value" id="display-nama-lengkap">MUHAMMAD FIRDAUS</span>
+              </div>
+            </div>
+
+            <!-- ITEM 2 -->
+            <div class="spec-cell">
+              <div class="spec-icon"><i class="fa-solid fa-signature"></i></div>
+              <div class="spec-content">
+                <span class="spec-label">Nama Panggilan</span>
+                <span class="spec-value" id="display-nama-panggilan">DAUS</span>
+              </div>
+            </div>
+
+            <!-- ITEM 3 -->
+            <div class="spec-cell">
+              <div class="spec-icon"><i class="fa-solid fa-mask"></i></div>
+              <div class="spec-content">
+                <span class="spec-label">Nama Samaran / IGN</span>
+                <span class="spec-value text-neon-purple" id="display-nama-samaran">DANZ, ZARR, DITZ</span>
+              </div>
+            </div>
+
+            <!-- ITEM 4 -->
+            <div class="spec-cell">
+              <div class="spec-icon"><i class="fa-solid fa-calendar-day"></i></div>
+              <div class="spec-content">
+                <span class="spec-label">Tempat, Tanggal Lahir</span>
+                <span class="spec-value" id="display-ttl">PALEMBANG, 2 JULY 2010</span>
+              </div>
+            </div>
+
+            <!-- ITEM 5 -->
+            <div class="spec-cell">
+              <div class="spec-icon"><i class="fa-solid fa-venus-mars"></i></div>
+              <div class="spec-content">
+                <span class="spec-label">Jenis Kelamin</span>
+                <span class="spec-value" id="display-gender">LAKI - LAKI</span>
+              </div>
+            </div>
+
+            <!-- ITEM 6 -->
+            <div class="spec-cell">
+              <div class="spec-icon"><i class="fa-solid fa-mosque"></i></div>
+              <div class="spec-content">
+                <span class="spec-label">Agama</span>
+                <span class="spec-value" id="display-agama">ISLAM</span>
+              </div>
+            </div>
+
+            <!-- ITEM 7 -->
+            <div class="spec-cell full-width">
+              <div class="spec-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="spec-content">
+                <span class="spec-label">Alamat Lengkap</span>
+                <span class="spec-value" id="display-alamat">KOMPLEK BNI NOMOR 50 KEL KEBUN BUNGA KEC SUKARAMI, PALEMBANG</span>
+              </div>
+            </div>
+
+            <!-- ITEM 8 -->
+            <div class="spec-cell">
+              <div class="spec-icon"><i class="fa-solid fa-person-running"></i></div>
+              <div class="spec-content">
+                <span class="spec-label">Hobi Utama</span>
+                <span class="spec-value" id="display-hobi">LARI (ATHLETICS &amp; FITNESS)</span>
+              </div>
+            </div>
+
+            <!-- ITEM 9 -->
+            <div class="spec-cell highlight-gold">
+              <div class="spec-icon text-gold"><i class="fa-solid fa-sack-dollar"></i></div>
+              <div class="spec-content">
+                <span class="spec-label">Cita-Cita Terbesar</span>
+                <span class="spec-value text-gold" id="display-cita-cita">TRILIUNER 🚀</span>
+              </div>
+            </div>
+
+            <!-- ITEM 10 -->
+            <div class="spec-cell full-width">
+              <div class="spec-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="spec-content">
+                <span class="spec-label">Keahlian Unggulan</span>
+                <span class="spec-value" id="display-keahlian">CODING &bull; PELATIH ESPORT &bull; DI KOMPUTER (TJKT &amp; HARDWARE)</span>
+              </div>
+            </div>
+
+            <!-- ITEM 11 -->
+            <div class="spec-cell full-width">
+              <div class="spec-icon"><i class="fa-solid fa-gamepad"></i></div>
+              <div class="spec-content">
+                <span class="spec-label">Game Favorit</span>
+                <span class="spec-value" id="display-game-favorit">MINECRAFT &bull; FREE FIRE (FF) &bull; MOBILE LEGENDS (ML)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="motto-box-panel">
+            <i class="fa-solid fa-fire text-neon-purple"></i>
+            <div>
+              <strong>Motto Hidup:</strong>
+              <span id="display-motto-panjang">"Jangan berhenti ketika lelah. Berhentilah ketika selesai."</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EDUCATION SECTION ==================== -->
+  <section class="section education-section" id="pendidikan">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag"><i class="fa-solid fa-graduation-cap"></i> JEJAK AKADEMIK</div>
+        <h2 class="section-title">Riwayat <span class="neon-text">Pendidikan</span></h2>
+        <p class="section-subtitle">Perjalanan menempuh pendidikan dari tingkat dasar hingga kejuruan di bidang TJKT.</p>
+        <div class="header-divider"></div>
+      </div>
+
+      <div class="timeline-container">
+        <!-- TIMELINE LINE -->
+        <div class="timeline-line"></div>
+
+        <!-- SD -->
+        <div class="timeline-item reveal-item" data-side="left">
+          <div class="timeline-node">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <div class="timeline-card glass-panel">
+            <div class="card-glow-badge">PENDIDIKAN DASAR</div>
+            <div class="timeline-period">
+              <i class="fa-regular fa-calendar-check"></i> Lulusan Sekolah Dasar
+            </div>
+            <h3 class="timeline-school" id="edu-sd-title">SD N 133 PALEMBANG</h3>
+            <p class="timeline-desc">
+              Membangun fondasi karakter disiplin, aktif dalam kegiatan belajar mengajar, olahraga atletik lari, serta mulai mengenal dasar-dasar perangkat komputer.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Pondasi Karakter</span>
+              <span class="tag">Olahraga Lari</span>
+              <span class="tag">Juara Kelas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SMP -->
+        <div class="timeline-item reveal-item" data-side="right">
+          <div class="timeline-node">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <div class="timeline-card glass-panel">
+            <div class="card-glow-badge">SEKOLAH MENENGAH PERTAMA</div>
+            <div class="timeline-period">
+              <i class="fa-regular fa-calendar-check"></i> Lulusan Menengah Pertama
+            </div>
+            <h3 class="timeline-school" id="edu-smp-title">SMP N 40 PALEMBANG</h3>
+            <p class="timeline-desc">
+              Mengembangkan potensi kepemimpinan dan minat mendalam terhadap dunia gaming kompetitif, teknologi informasi, serta mengasah kerja sama tim dalam berbagai kompetisi.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Eksplorasi Teknologi</span>
+              <span class="tag">Esport Strategy</span>
+              <span class="tag">Teamwork</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SMK -->
+        <div class="timeline-item reveal-item current-step" data-side="left">
+          <div class="timeline-node">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div class="timeline-card glass-panel active-school">
+            <div class="card-glow-badge highlight">SEKARANG &bull; AKTIF</div>
+            <div class="timeline-period text-neon-purple">
+              <i class="fa-solid fa-circle-dot pulsing"></i> Sedang Menempuh Pendidikan
+            </div>
+            <h3 class="timeline-school" id="edu-smk-title">SMK MUHAMMADIYAH 1 PALEMBANG</h3>
+            <div class="jurusan-badge">
+              <i class="fa-solid fa-network-wired"></i>
+              <span>JURUSAN TJKT (Teknik Jaringan Komputer & Telekomunikasi)</span>
+            </div>
+            <p class="timeline-desc">
+              Fokus mendalami arsitektur jaringan komputer (routing, switching, Mikrotik), sistem operasi server, troubleshooting hardware, dasar pemrograman web, serta aktif menjadi pelatih esport sekolah.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag tag-accent">TJKT Expert</span>
+              <span class="tag tag-accent">Networking</span>
+              <span class="tag tag-accent">Web Dev</span>
+              <span class="tag tag-accent">Pelatih Esport</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HOBBIES & INTERESTS ==================== -->
+  <section class="section hobbies-section" id="hobi">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag"><i class="fa-solid fa-heart-pulse"></i> PASSION & LIFESTYLE</div>
+        <h2 class="section-title">Hobi &amp; <span class="neon-text">Minat</span></h2>
+        <p class="section-subtitle">Aktivitas produktif dan kegemaran yang membentuk fisik tangguh, mental juara, dan skill masa depan.</p>
+        <div class="header-divider"></div>
+      </div>
+
+      <div class="hobbies-grid">
+        <!-- OLAHRAGA (LARI) -->
+        <div class="hobby-card glass-panel reveal-item">
+          <div class="hobby-icon-box bg-purple-glow">
+            <i class="fa-solid fa-person-running"></i>
+          </div>
+          <div class="hobby-badge">STAMINA &amp; DISIPLIN</div>
+          <h3 class="hobby-title">Olahraga (Lari)</h3>
+          <p class="hobby-desc">
+            Rutin lari pagi dan sore untuk menjaga kebugaran jasmani, melatih endurance, serta membangun ketahanan mental yang tidak mudah menyerah.
+          </p>
+          <ul class="hobby-points">
+            <li><i class="fa-solid fa-check"></i> Lari Interval &amp; Jogging Rutin</li>
+            <li><i class="fa-solid fa-check"></i> Meningkatkan Fokus &amp; Mood</li>
+            <li><i class="fa-solid fa-check"></i> Menjaga Disiplin Hidup Sehat</li>
+          </ul>
+        </div>
+
+        <!-- GAMING -->
+        <div class="hobby-card glass-panel reveal-item">
+          <div class="hobby-icon-box bg-purple-glow">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <div class="hobby-badge">TACTICAL &amp; ESPORTS</div>
+          <h3 class="hobby-title">Gaming Kompetitif</h3>
+          <p class="hobby-desc">
+            Bukan sekadar hiburan, melainkan wadah mengasah insting taktis, refleks cepat, analisis makro-mikro, dan kepemimpinan di arena esport.
+          </p>
+          <ul class="hobby-points">
+            <li><i class="fa-solid fa-check"></i> Free Fire, MLBB, Minecraft, PUBG</li>
+            <li><i class="fa-solid fa-check"></i> IGL (In-Game Leader) &amp; Tactician</li>
+            <li><i class="fa-solid fa-check"></i> Pelatih &amp; Analis Turnamen</li>
+          </ul>
+        </div>
+
+        <!-- TEKNOLOGI -->
+        <div class="hobby-card glass-panel reveal-item">
+          <div class="hobby-icon-box bg-purple-glow">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <div class="hobby-badge">HARDWARE &amp; TECH</div>
+          <h3 class="hobby-title">Teknologi &amp; Komputer</h3>
+          <p class="hobby-desc">
+            Mengeksplorasi jeroan PC, manajemen periferal, optimasi sistem operasi Windows &amp; Linux, serta mengulik tren AI dan hardware masa kini.
+          </p>
+          <ul class="hobby-points">
+            <li><i class="fa-solid fa-check"></i> Perakitan &amp; Troubleshooting PC</li>
+            <li><i class="fa-solid fa-check"></i> Instalasi OS &amp; Optimalisasi Game</li>
+            <li><i class="fa-solid fa-check"></i> Maintenance Perangkat Keras</li>
+          </ul>
+        </div>
+
+        <!-- NETWORKING -->
+        <div class="hobby-card glass-panel reveal-item">
+          <div class="hobby-icon-box bg-purple-glow">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <div class="hobby-badge">TJKT CORE</div>
+          <h3 class="hobby-title">Networking (Jaringan)</h3>
+          <p class="hobby-desc">
+            Mempelajari topologi jaringan, crimping kabel UTP RJ45, konfigurasi Router MikroTik, subnetting IP address, hingga konektivitas internet stabil.
+          </p>
+          <ul class="hobby-points">
+            <li><i class="fa-solid fa-check"></i> Konfigurasi Routerboard &amp; Switch</li>
+            <li><i class="fa-solid fa-check"></i> Manajemen Bandwidth &amp; Hotspot</li>
+            <li><i class="fa-solid fa-check"></i> Troubleshooting LAN / WLAN</li>
+          </ul>
+        </div>
+
+        <!-- WEB DEVELOPMENT -->
+        <div class="hobby-card glass-panel reveal-item">
+          <div class="hobby-icon-box bg-purple-glow">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div class="hobby-badge">CODING &amp; CREATIVITY</div>
+          <h3 class="hobby-title">Web Development</h3>
+          <p class="hobby-desc">
+            Membangun antarmuka website modern dengan HTML5, CSS3 kustom, dan logika JavaScript interaktif untuk menyongsong era industri digital.
+          </p>
+          <ul class="hobby-points">
+            <li><i class="fa-solid fa-check"></i> Desain UI/UX Futuristik</li>
+            <li><i class="fa-solid fa-check"></i> Website Responsif Mobile &amp; Desktop</li>
+            <li><i class="fa-solid fa-check"></i> Efek Animasi &amp; Interaktivitas</li>
+          </ul>
+        </div>
+
+        <!-- AKTIVITAS LAINNYA -->
+        <div class="hobby-card glass-panel reveal-item">
+          <div class="hobby-icon-box bg-purple-glow">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <div class="hobby-badge">LEADERSHIP &amp; COMMUNITY</div>
+          <h3 class="hobby-title">Mentoring &amp; Komunitas</h3>
+          <p class="hobby-desc">
+            Aktif membimbing rekan tim esport, sharing wawasan seputar dunia komputer TJKT, serta berorganisasi untuk mengasah komunikasi publik.
+          </p>
+          <ul class="hobby-points">
+            <li><i class="fa-solid fa-check"></i> Coaching Roster Esport Muda</li>
+            <li><i class="fa-solid fa-check"></i> Diskusi Komunitas IT &amp; Gaming</li>
+            <li><i class="fa-solid fa-check"></i> Visi Menuju Entrepreneur Sukses</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAVORITE GAMES ==================== -->
+  <section class="section games-section" id="game">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag"><i class="fa-solid fa-gamepad"></i> ESPORT ARENA</div>
+        <h2 class="section-title">Game <span class="neon-text">Favorit</span></h2>
+        <p class="section-subtitle">Arena di mana strategi, kecepatan tangan, dan kepemimpinan tim diuji dalam kompetisi.</p>
+        <div class="header-divider"></div>
+      </div>
+
+      <div class="games-grid">
+        <!-- GAME 1: FREE FIRE -->
+        <div class="game-card glass-panel reveal-item">
+          <div class="game-media">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Free Fire Game">
+            <div class="game-overlay">
+              <span class="game-badge">BATTLE ROYALE</span>
+              <span class="game-ign">IGN: DANZ</span>
+            </div>
+          </div>
+          <div class="game-body">
+            <div class="game-header-info">
+              <h3 class="game-name">Free Fire (FF)</h3>
+              <span class="game-role"><i class="fa-solid fa-crosshairs"></i> Rusher / IGL</span>
+            </div>
+            <p class="game-desc">
+              Game battle royale intensif yang melatih kecepatan respon, rotasi zona presisi, dan positioning clutch saat berhadapan dengan lawan satu skuad.
+            </p>
+            <div class="game-stats">
+              <div class="stat-box">
+                <span class="stat-key">Peran Utama</span>
+                <span class="stat-val">Rusher &amp; Pelatih</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-key">Karakter Favorit</span>
+                <span class="stat-val">Alok / Tatsuya</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GAME 2: MOBILE LEGENDS -->
+        <div class="game-card glass-panel reveal-item">
+          <div class="game-media">
+            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Mobile Legends Game">
+            <div class="game-overlay">
+              <span class="game-badge">MOBA 5V5</span>
+              <span class="game-ign">IGN: ZARR</span>
+            </div>
+          </div>
+          <div class="game-body">
+            <div class="game-header-info">
+              <h3 class="game-name">Mobile Legends (MLBB)</h3>
+              <span class="game-role"><i class="fa-solid fa-shield-halved"></i> Midlane / Jungler</span>
+            </div>
+            <p class="game-desc">
+              Pertarungan taktis 5v5 dengan fokus pada makro gameplay, rotasi turtle/lord, kontrol tempo permainan, dan drafting hero counter yang matang.
+            </p>
+            <div class="game-stats">
+              <div class="stat-box">
+                <span class="stat-key">Tier Rank</span>
+                <span class="stat-val">Mythical Glory Tier</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-key">Keahlian</span>
+                <span class="stat-val">Draft Analyst &amp; Shotcaller</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GAME 3: MINECRAFT -->
+        <div class="game-card glass-panel reveal-item">
+          <div class="game-media">
+            <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80" alt="Minecraft Sandbox">
+            <div class="game-overlay">
+              <span class="game-badge">SANDBOX &amp; LOGIC</span>
+              <span class="game-ign">IGN: DITZ</span>
+            </div>
+          </div>
+          <div class="game-body">
+            <div class="game-header-info">
+              <h3 class="game-name">Minecraft</h3>
+              <span class="game-role"><i class="fa-solid fa-cubes"></i> Redstone &amp; Builder</span>
+            </div>
+            <p class="game-desc">
+              Media kreativitas tanpa batas untuk merancang sirkuit logika redstone (dasar logika komputer), arsitektur megabuild, dan manajemen server multiplayer.
+            </p>
+            <div class="game-stats">
+              <div class="stat-box">
+                <span class="stat-key">Keahlian</span>
+                <span class="stat-val">Redstone Automation</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-key">Aktivitas</span>
+                <span class="stat-val">Survival &amp; Architecture</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GAME 4: PUBG MOBILE -->
+        <div class="game-card glass-panel reveal-item">
+          <div class="game-media">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" alt="PUBG Mobile Game">
+            <div class="game-overlay">
+              <span class="game-badge">TACTICAL ESPORT</span>
+              <span class="game-ign">IGN: DANZ-ZARR</span>
+            </div>
+          </div>
+          <div class="game-body">
+            <div class="game-header-info">
+              <h3 class="game-name">PUBG Mobile</h3>
+              <span class="game-role"><i class="fa-solid fa-binoculars"></i> Scout &amp; Sniper</span>
+            </div>
+            <p class="game-desc">
+              Simulator pertempuran taktis dengan perhitungan balistik peluru, manajemen compound defensif, dan kalkulasi rotasi kendaraan berisiko tinggi.
+            </p>
+            <div class="game-stats">
+              <div class="stat-box">
+                <span class="stat-key">Kategori</span>
+                <span class="stat-val">Competitive Squad</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-key">Senjata Favorit</span>
+                <span class="stat-val">M416 + AWM / DMR</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXPERIENCE & LEADERSHIP ==================== -->
+  <section class="section experience-section" id="pengalaman">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag"><i class="fa-solid fa-briefcase"></i> REKAM JEJAK &amp; KEPEMIMPINAN</div>
+        <h2 class="section-title">Pengalaman &amp; <span class="neon-text">Jabatan</span></h2>
+        <p class="section-subtitle">Tanggung jawab kepemimpinan, kontribusi organisasi, serta prestasi yang telah dicapai.</p>
+        <div class="header-divider"></div>
+      </div>
+
+      <div class="exp-grid">
+        <!-- EXP 1: PELATIH ESPORT -->
+        <div class="exp-card glass-panel reveal-item">
+          <div class="exp-top">
+            <div class="exp-badge-year"><i class="fa-regular fa-clock"></i> 2024 - Sekarang</div>
+            <span class="exp-status-pill active">AKTIF</span>
+          </div>
+          <div class="exp-main">
+            <div class="exp-icon bg-purple-glow">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div>
+              <h3 class="exp-role">Pelatih &amp; Analis Tim Esport</h3>
+              <h4 class="exp-org">Komunitas Gaming &amp; Tim Turnamen Pelajar</h4>
+            </div>
+          </div>
+          <div class="exp-content">
+            <p class="exp-desc">
+              Bertanggung jawab penuh merancang strategi permainan, penyusunan draft hero, jadwal latihan scrim rutin, evaluasi rekaman pertandingan, serta pembentukan mental juara atlet esport muda.
+            </p>
+            <div class="exp-section-block">
+              <strong>Tugas &amp; Tanggung Jawab:</strong>
+              <ul>
+                <li>Menyusun formula taktis tim dalam kompetisi Free Fire dan Mobile Legends.</li>
+                <li>Melakukan scouting bakat dan memimpin sesi review pasca-pertandingan (VOD review).</li>
+                <li>Membangun kekompakan dan komunikasi antar pemain agar tidak goyah di bawah tekanan.</li>
+              </ul>
+            </div>
+            <div class="exp-prestasi">
+              <i class="fa-solid fa-medal text-gold"></i>
+              <span><strong>Prestasi:</strong> Membawa tim menjuarai sejumlah turnamen tingkat komunitas dan pelajar di Palembang.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXP 2: KOORDINATOR LAB TJKT -->
+        <div class="exp-card glass-panel reveal-item">
+          <div class="exp-top">
+            <div class="exp-badge-year"><i class="fa-regular fa-clock"></i> 2025 - Sekarang</div>
+            <span class="exp-status-pill active">AKTIF</span>
+          </div>
+          <div class="exp-main">
+            <div class="exp-icon bg-purple-glow">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <div>
+              <h3 class="exp-role">Asisten Praktik &amp; Koordinator Lab TJKT</h3>
+              <h4 class="exp-org">SMK Muhammadiyah 1 Palembang</h4>
+            </div>
+          </div>
+          <div class="exp-content">
+            <p class="exp-desc">
+              Membantu guru dan rekan sekelas dalam perakitan infrastruktur jaringan lab, pengkabelan LAN, konfigurasi switch &amp; router, serta pemeliharaan hardware komputer praktikum.
+            </p>
+            <div class="exp-section-block">
+              <strong>Tugas &amp; Tanggung Jawab:</strong>
+              <ul>
+                <li>Memastikan ketersediaan dan kestabilan koneksi internet pada workstation lab.</li>
+                <li>Membimbing teman sejawat dalam simulasi Cisco Packet Tracer dan setting MikroTik.</li>
+                <li>Melakukan inventarisasi dan pengecekan kesehatan hardware PC secara berkala.</li>
+              </ul>
+            </div>
+            <div class="exp-prestasi">
+              <i class="fa-solid fa-star text-gold"></i>
+              <span><strong>Prestasi:</strong> Penghargaan sebagai siswa paling aktif dan tanggap dalam praktikum jaringan kejuruan.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EXP 3: ORGANISASI KEPEMIMPINAN -->
+        <div class="exp-card glass-panel reveal-item">
+          <div class="exp-top">
+            <div class="exp-badge-year"><i class="fa-regular fa-clock"></i> 2023 - Sekarang</div>
+            <span class="exp-status-pill">PENGURUS</span>
+          </div>
+          <div class="exp-main">
+            <div class="exp-icon bg-purple-glow">
+              <i class="fa-solid fa-users-gear"></i>
+            </div>
+            <div>
+              <h3 class="exp-role">Pengurus &amp; Tim Divisi IT / Kreatif</h3>
+              <h4 class="exp-org">Organisasi Siswa &amp; Kepanitiaan Event</h4>
+            </div>
+          </div>
+          <div class="exp-content">
+            <p class="exp-desc">
+              Terlibat aktif dalam mengelola kepanitiaan acara sekolah, mengorganisir turnamen eSports internal, dokumentasi digital, serta perancangan media publikasi.
+            </p>
+            <div class="exp-section-block">
+              <strong>Tugas &amp; Tanggung Jawab:</strong>
+              <ul>
+                <li>Merancang konsep teknis kompetisi eSports sekolah dan siaran live streaming.</li>
+                <li>Mengkoordinir logistik audio-visual dan koneksi internet saat pentas acara.</li>
+                <li>Mengasah kemampuan public speaking dan kepemimpinan delegasi antar divisi.</li>
+              </ul>
+            </div>
+            <div class="exp-prestasi">
+              <i class="fa-solid fa-award text-gold"></i>
+              <span><strong>Prestasi:</strong> Sukses menyelenggarakan turnamen game pelajar dengan partisipasi puluhan skuad.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS & PROGRESS BARS ==================== -->
+  <section class="section skills-section" id="keahlian">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag"><i class="fa-solid fa-bolt"></i> KOMPETENSI TEKNOLOGI</div>
+        <h2 class="section-title">Indikator <span class="neon-text">Keahlian</span></h2>
+        <p class="section-subtitle">Tingkat penguasaan teknis dan kemampuan interpersonal yang terus diasah secara konsisten.</p>
+        <div class="header-divider"></div>
+      </div>
+
+      <!-- FILTER SKILL TABS -->
+      <div class="skills-filter-buttons">
+        <button class="skill-tab-btn active" data-filter="all">Semua Keahlian</button>
+        <button class="skill-tab-btn" data-filter="tech">Keahlian Teknis &amp; IT</button>
+        <button class="skill-tab-btn" data-filter="soft">Kepemimpinan &amp; Soft Skills</button>
+      </div>
+
+      <div class="skills-container-grid">
+        <!-- HARD SKILLS / TECH -->
+        <div class="skills-group glass-panel reveal-item" data-group="tech">
+          <div class="group-header">
+            <i class="fa-solid fa-code text-neon-purple"></i>
+            <h3>Keahlian Teknis &amp; Pemrograman</h3>
+          </div>
+
+          <div class="skill-bars-list">
+            <!-- HTML -->
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name"><i class="fa-brands fa-html5 text-orange"></i> HTML5 (Struktur Web Modern)</span>
+                <span class="skill-percent" data-value="92">0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-target="92"></div>
+              </div>
+            </div>
+
+            <!-- CSS -->
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name"><i class="fa-brands fa-css3-alt text-blue"></i> CSS3 &amp; Glassmorphism Design</span>
+                <span class="skill-percent" data-value="88">0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-target="88"></div>
+              </div>
+            </div>
+
+            <!-- JAVASCRIPT -->
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name"><i class="fa-brands fa-js text-yellow"></i> JavaScript (DOM &amp; Interaktivitas)</span>
+                <span class="skill-percent" data-value="82">0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-target="82"></div>
+              </div>
+            </div>
+
+            <!-- NETWORKING -->
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name"><i class="fa-solid fa-network-wired text-cyan"></i> Networking TJKT (MikroTik, LAN/WLAN)</span>
+                <span class="skill-percent" data-value="95">0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-target="95"></div>
+              </div>
+            </div>
+
+            <!-- EDITING -->
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name"><i class="fa-solid fa-film text-purple"></i> Editing Video &amp; Grafis (CapCut &amp; Canva)</span>
+                <span class="skill-percent" data-value="85">0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-target="85"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SOFT SKILLS / LEADERSHIP -->
+        <div class="skills-group glass-panel reveal-item" data-group="soft">
+          <div class="group-header">
+            <i class="fa-solid fa-users text-neon-purple"></i>
+            <h3>Kepemimpinan &amp; Interpersonal</h3>
+          </div>
+
+          <div class="skill-bars-list">
+            <!-- LEADERSHIP -->
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name"><i class="fa-solid fa-chess-king text-gold"></i> Leadership (Kepemimpinan Esport &amp; Tim)</span>
+                <span class="skill-percent" data-value="90">0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-target="90"></div>
+              </div>
+            </div>
+
+            <!-- TEAMWORK -->
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name"><i class="fa-solid fa-handshake-angle text-emerald"></i> Teamwork &amp; Kolaborasi Tim</span>
+                <span class="skill-percent" data-value="94">0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-target="94"></div>
+              </div>
+            </div>
+
+            <!-- COMMUNICATION -->
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name"><i class="fa-solid fa-comments text-cyan"></i> Communication (Komunikasi Efektif)</span>
+                <span class="skill-percent" data-value="88">0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-target="88"></div>
+              </div>
+            </div>
+
+            <!-- STRATEGY & TACTICS -->
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name"><i class="fa-solid fa-brain text-neon-purple"></i> Strategic Problem Solving</span>
+                <span class="skill-percent" data-value="89">0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-target="89"></div>
+              </div>
+            </div>
+
+            <!-- MENTORSHIP -->
+            <div class="skill-item">
+              <div class="skill-meta">
+                <span class="skill-name"><i class="fa-solid fa-chalkboard-user text-orange"></i> Mentoring &amp; Coaching Mindset</span>
+                <span class="skill-percent" data-value="91">0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%;" data-target="91"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GALLERY WITH LIGHTBOX ==================== -->
+  <section class="section gallery-section" id="galeri">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag"><i class="fa-solid fa-images"></i> VISUAL REPOSITORY</div>
+        <h2 class="section-title">Dokumentasi <span class="neon-text">Galeri</span></h2>
+        <p class="section-subtitle">Kumpulan momen foto pribadi, aktivitas sekolah, kegiatan organisasi, dan kebersamaan tim.</p>
+        <div class="header-divider"></div>
+      </div>
+
+      <!-- GALLERY CATEGORY FILTER -->
+      <div class="gallery-filters">
+        <button class="gal-filter-btn active" data-category="all">Semua Foto</button>
+        <button class="gal-filter-btn" data-category="pribadi">Pribadi</button>
+        <button class="gal-filter-btn" data-category="sekolah">Sekolah (TJKT)</button>
+        <button class="gal-filter-btn" data-category="kegiatan">Kegiatan &amp; Lari</button>
+        <button class="gal-filter-btn" data-category="esport">Tim &amp; Esport</button>
+      </div>
+
+      <!-- GALLERY GRID -->
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- ITEM 1: PRIBADI -->
+        <div class="gallery-card reveal-item" data-category="pribadi">
+          <div class="gallery-thumb">
+            <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=800&q=80" alt="Foto Profil Muhammad Firdaus" class="gal-img">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gal-tag">Pribadi</span>
+                <h4 class="gal-title">Potret Muhammad Firdaus</h4>
+                <p class="gal-desc">Semangat muda, fokus pada tujuan dan cita-cita triliuner.</p>
+              </div>
+              <button class="gal-zoom-btn" title="Perbesar Gambar"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 2: SEKOLAH / TJKT -->
+        <div class="gallery-card reveal-item" data-category="sekolah">
+          <div class="gallery-thumb">
+            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80" alt="Praktikum Jaringan TJKT" class="gal-img">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gal-tag">Sekolah (TJKT)</span>
+                <h4 class="gal-title">Praktik Jaringan Komputer</h4>
+                <p class="gal-desc">Sesi pengkabelan dan konfigurasi server di lab TJKT.</p>
+              </div>
+              <button class="gal-zoom-btn" title="Perbesar Gambar"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 3: ESPORT & TIM -->
+        <div class="gallery-card reveal-item" data-category="esport">
+          <div class="gallery-thumb">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Turnamen Esport Bersama Tim" class="gal-img">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gal-tag">Tim &amp; Esport</span>
+                <h4 class="gal-title">Coaching &amp; Turnamen Esport</h4>
+                <p class="gal-desc">Briefing taktis bersama roster pemain sebelum matchday turnamen.</p>
+              </div>
+              <button class="gal-zoom-btn" title="Perbesar Gambar"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 4: KEGIATAN LARI -->
+        <div class="gallery-card reveal-item" data-category="kegiatan">
+          <div class="gallery-thumb">
+            <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=800&q=80" alt="Aktivitas Lari dan Olahraga" class="gal-img">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gal-tag">Kegiatan &amp; Lari</span>
+                <h4 class="gal-title">Latihan Stamina &amp; Lari</h4>
+                <p class="gal-desc">Menjaga kebugaran fisik dan stamina di lintasan atletik Palembang.</p>
+              </div>
+              <button class="gal-zoom-btn" title="Perbesar Gambar"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 5: ORGANISASI -->
+        <div class="gallery-card reveal-item" data-category="sekolah">
+          <div class="gallery-thumb">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Organisasi dan Musyawarah Siswa" class="gal-img">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gal-tag">Sekolah (TJKT)</span>
+                <h4 class="gal-title">Musyawarah &amp; Kerja Sama Organisasi</h4>
+                <p class="gal-desc">Sesi koordinasi program kerja bersama pengurus pelajar.</p>
+              </div>
+              <button class="gal-zoom-btn" title="Perbesar Gambar"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 6: CODING & SETUP -->
+        <div class="gallery-card reveal-item" data-category="pribadi">
+          <div class="gallery-thumb">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Setup Komputer & Coding" class="gal-img">
+            <div class="gallery-overlay">
+              <div class="gallery-info">
+                <span class="gal-tag">Pribadi</span>
+                <h4 class="gal-title">Sesi Coding &amp; Eksplorasi Web</h4>
+                <p class="gal-desc">Merancang antarmuka website biodata futuristik di depan layar monitor.</p>
+              </div>
+              <button class="gal-zoom-btn" title="Perbesar Gambar"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LIGHTBOX MODAL ==================== -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Tutup Galeri">&times;</button>
+      <button class="lightbox-nav prev" id="lightbox-prev" aria-label="Foto Sebelumnya"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="lightbox-nav next" id="lightbox-next" aria-label="Foto Selanjutnya"><i class="fa-solid fa-chevron-right"></i></button>
+
+      <div class="lightbox-content">
+        <img src="" alt="Perbesar Gambar" id="lightbox-img" class="lightbox-img">
+        <div class="lightbox-caption">
+          <span class="lightbox-badge" id="lightbox-badge">Kategori</span>
+          <h3 class="lightbox-title" id="lightbox-title">Judul Foto</h3>
+          <p class="lightbox-desc" id="lightbox-desc">Deskripsi foto yang dipilih.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SOCIAL MEDIA & CONTACT ==================== -->
+  <section class="section contact-section" id="kontak">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag"><i class="fa-solid fa-paper-plane"></i> TERHUBUNG &amp; KOLABORASI</div>
+        <h2 class="section-title">Media Sosial &amp; <span class="neon-text">Kontak</span></h2>
+        <p class="section-subtitle">Jangan ragu untuk menyapa, berdiskusi seputar esport, networking TJKT, atau peluang kerja sama.</p>
+        <div class="header-divider"></div>
+      </div>
+
+      <!-- SOCIAL MEDIA BUTTONS / CARDS -->
+      <div class="social-cards-grid">
+        <!-- INSTAGRAM -->
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-card ig-card reveal-item" id="link-instagram">
+          <div class="social-icon-box"><i class="fa-brands fa-instagram"></i></div>
+          <div class="social-details">
+            <span class="social-name">Instagram</span>
+            <span class="social-handle" id="handle-instagram">@muhammad.firdaus</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square external-link-icon"></i>
+        </a>
+
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="social-card wa-card reveal-item" id="link-whatsapp">
+          <div class="social-icon-box"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="social-details">
+            <span class="social-name">WhatsApp</span>
+            <span class="social-handle" id="handle-whatsapp">+62 812-3456-7890</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square external-link-icon"></i>
+        </a>
+
+        <!-- TIKTOK -->
+        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-card tt-card reveal-item" id="link-tiktok">
+          <div class="social-icon-box"><i class="fa-brands fa-tiktok"></i></div>
+          <div class="social-details">
+            <span class="social-name">TikTok</span>
+            <span class="social-handle" id="handle-tiktok">@daus.zarr</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square external-link-icon"></i>
+        </a>
+
+        <!-- FACEBOOK -->
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-card fb-card reveal-item" id="link-facebook">
+          <div class="social-icon-box"><i class="fa-brands fa-facebook-f"></i></div>
+          <div class="social-details">
+            <span class="social-name">Facebook</span>
+            <span class="social-handle" id="handle-facebook">Muhammad Firdaus</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square external-link-icon"></i>
+        </a>
+
+        <!-- YOUTUBE -->
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-card yt-card reveal-item" id="link-youtube">
+          <div class="social-icon-box"><i class="fa-brands fa-youtube"></i></div>
+          <div class="social-details">
+            <span class="social-name">YouTube</span>
+            <span class="social-handle" id="handle-youtube">Danz Esport Official</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square external-link-icon"></i>
+        </a>
+      </div>
+
+      <!-- CONTACT FORM CONTAINER -->
+      <div class="contact-form-layout glass-panel reveal-item">
+        <div class="contact-form-info">
+          <div class="info-badge">KIRIM PESAN LANGSUNG</div>
+          <h3 class="info-title">Punya Ide Proyek atau Tantangan Esport?</h3>
+          <p class="info-desc">
+            Saya selalu terbuka untuk berdiskusi seputar turnamen esport, kolaborasi proyek web development, arsitektur jaringan TJKT, maupun pertemanan.
+          </p>
+
+          <div class="info-contact-list">
+            <div class="info-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Lokasi Domisili:</strong>
+                <span>Palembang, Sumatera Selatan, Indonesia</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email Langsung:</strong>
+                <span id="display-email">firdaus.daus.tjkt@gmail.com</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Jam Respon Cepat:</strong>
+                <span>15:00 - 22:00 WIB (Setiap Hari)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name"><i class="fa-solid fa-user"></i> Nama Anda</label>
+              <input type="text" id="contact-name" placeholder="Contoh: Alex Pratama" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email"><i class="fa-solid fa-envelope"></i> Email / No. WhatsApp</label>
+              <input type="text" id="contact-email" placeholder="Contoh: alex@gmail.com atau 0812..." required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-subject"><i class="fa-solid fa-tag"></i> Subjek / Topik</label>
+            <select id="contact-subject" required>
+              <option value="" disabled selected>Pilih Topik Diskusi</option>
+              <option value="Tantangan / Scrim Esport">Tantangan / Scrim Esport (FF / ML)</option>
+              <option value="Proyek Web & IT">Peluang Proyek Web &amp; IT Networking</option>
+              <option value="Sapaan & Pertemanan">Sapaan &amp; Pertemanan</option>
+              <option value="Konsultasi & Lainnya">Konsultasi / Lainnya</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message"><i class="fa-solid fa-message"></i> Pesan Anda</label>
+            <textarea id="contact-message" rows="4" placeholder="Tuliskan pesan atau ajakan kolaborasi Anda di sini..." required></textarea>
+          </div>
+
+          <div class="form-submit-row">
+            <button type="submit" class="btn btn-primary-neon btn-block" id="btn-submit-message">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Kirim Pesan Sekarang</span>
+            </button>
+            <button type="button" class="btn btn-wa-direct" id="btn-wa-direct">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Kirim via WhatsApp Langsung</span>
+            </button>
+          </div>
+
+          <!-- SUCCESS TOAST / MESSAGE FEEDBACK -->
+          <div class="form-alert" id="form-alert"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="logo-box">DF</span>
+            <div class="brand-text">
+              <span class="brand-name">MUHAMMAD FIRDAUS</span>
+              <span class="brand-tag">DANZ &bull; ZARR &bull; DITZ</span>
+            </div>
+          </div>
+          <p class="footer-motto">
+            "Jangan berhenti ketika lelah. Berhentilah ketika selesai."
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Navigasi Cepat</h4>
+          <ul>
+            <li><a href="#hero">Beranda</a></li>
+            <li><a href="#biodata">Biodata Pribadi</a></li>
+            <li><a href="#pendidikan">Riwayat Pendidikan</a></li>
+            <li><a href="#game">Game Favorit</a></li>
+            <li><a href="#keahlian">Keahlian &amp; Skills</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-group">
+          <h4>Identitas Ringkas</h4>
+          <ul>
+            <li><span>TTL: Palembang, 2 Juli 2010</span></li>
+            <li><span>Status: Pelajar TJKT SMK</span></li>
+            <li><span>Cita-cita: Triliuner</span></li>
+            <li><span>Hobi: Lari &amp; Esport Coaching</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; <span id="current-year">2026</span> <strong>Muhammad Firdaus</strong>. Seluruh Hak Cipta Dilindungi.
+        </div>
+        <div class="footer-admin-link">
+          <button id="footer-admin-btn" class="text-btn">
+            <i class="fa-solid fa-gear"></i> Panel Admin Dashboard
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING QUICK CONTROLS ==================== -->
+  <div class="floating-controls">
+    <!-- BACK TO TOP BUTTON -->
+    <button id="back-to-top" class="floating-btn" title="Kembali ke Bagian Atas" aria-label="Kembali ke Atas">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    
+    <!-- QUICK ADMIN FLOATING PILL -->
+    <button id="floating-admin-btn" class="floating-admin-pill" title="Edit Biodata Sekarang">
+      <i class="fa-solid fa-pen-nib"></i>
+      <span>Edit Bio</span>
+    </button>
+  </div>
+
+  <!-- ==================== DASHBOARD ADMIN MODAL ==================== -->
+  <div class="admin-modal" id="admin-modal">
+    <div class="admin-backdrop" id="admin-backdrop"></div>
+    <div class="admin-panel glass-panel">
+      <!-- ADMIN HEADER -->
+      <div class="admin-header">
+        <div class="admin-header-title">
+          <i class="fa-solid fa-sliders text-neon-purple"></i>
+          <div>
+            <h3>Dashboard Admin Biodata</h3>
+            <span>Kelola data profil, media sosial, foto, dan motto hidup Anda secara instan</span>
+          </div>
+        </div>
+        <button class="admin-close-btn" id="admin-close-btn" aria-label="Tutup Dashboard Admin">&times;</button>
+      </div>
+
+      <!-- PIN AUTHENTICATION VIEW (FIRST TIME) -->
+      <div class="admin-auth-view" id="admin-auth-view">
+        <div class="auth-box">
+          <div class="auth-icon-ring">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <h4>Verifikasi Akses Admin</h4>
+          <p>Masukkan PIN keamanan untuk mengedit biodata (PIN Default: <code>1234</code>)</p>
+          <div class="pin-input-group">
+            <input type="password" id="admin-pin-input" placeholder="Masukkan PIN 4 digit" maxlength="8" autofocus>
+            <button class="btn btn-primary-neon" id="btn-verify-pin">Buka Akses</button>
+          </div>
+          <span class="auth-hint" id="auth-hint"></span>
+        </div>
+      </div>
+
+      <!-- MAIN ADMIN FORM VIEW -->
+      <div class="admin-form-view" id="admin-form-view" style="display: none;">
+        <div class="admin-tabs">
+          <button class="admin-tab-btn active" data-tab="tab-identitas"><i class="fa-solid fa-id-card"></i> Identitas &amp; Bio</button>
+          <button class="admin-tab-btn" data-tab="tab-sosmed"><i class="fa-solid fa-share-nodes"></i> Media Sosial</button>
+          <button class="admin-tab-btn" data-tab="tab-foto"><i class="fa-solid fa-image"></i> Foto Profil</button>
+          <button class="admin-tab-btn" data-tab="tab-data"><i class="fa-solid fa-database"></i> Backup &amp; Reset</button>
+        </div>
+
+        <form id="admin-edit-form" class="admin-edit-form">
+          <!-- TAB 1: IDENTITAS -->
+          <div class="tab-pane active" id="tab-identitas">
+            <div class="admin-grid-2">
+              <div class="admin-field">
+                <label for="edit-nama-lengkap">Nama Lengkap</label>
+                <input type="text" id="edit-nama-lengkap" required>
+              </div>
+              <div class="admin-field">
+                <label for="edit-nama-panggilan">Nama Panggilan</label>
+                <input type="text" id="edit-nama-panggilan" required>
+              </div>
+              <div class="admin-field">
+                <label for="edit-nama-samaran">Nama Samaran (Pisahkan koma)</label>
+                <input type="text" id="edit-nama-samaran" placeholder="DANZ, ZARR, DITZ" required>
+              </div>
+              <div class="admin-field">
+                <label for="edit-ttl">Tempat, Tanggal Lahir</label>
+                <input type="text" id="edit-ttl" placeholder="PALEMBANG 2 JULY 2010" required>
+              </div>
+              <div class="admin-field">
+                <label for="edit-gender">Jenis Kelamin</label>
+                <select id="edit-gender">
+                  <option value="LAKI - LAKI">LAKI - LAKI</option>
+                  <option value="PEREMPUAN">PEREMPUAN</option>
+                </select>
+              </div>
+              <div class="admin-field">
+                <label for="edit-agama">Agama</label>
+                <input type="text" id="edit-agama" value="ISLAM" required>
+              </div>
+              <div class="admin-field">
+                <label for="edit-hobi">Hobi Utama</label>
+                <input type="text" id="edit-hobi" value="LARI" required>
+              </div>
+              <div class="admin-field">
+                <label for="edit-cita-cita">Cita-Cita</label>
+                <input type="text" id="edit-cita-cita" value="TRILIUNER" required>
+              </div>
+              <div class="admin-field full-col">
+                <label for="edit-alamat">Alamat Lengkap</label>
+                <input type="text" id="edit-alamat" required>
+              </div>
+              <div class="admin-field full-col">
+                <label for="edit-keahlian">Keahlian Ringkas</label>
+                <input type="text" id="edit-keahlian" required>
+              </div>
+              <div class="admin-field full-col">
+                <label for="edit-game-favorit">Game Favorit</label>
+                <input type="text" id="edit-game-favorit" required>
+              </div>
+              <div class="admin-field full-col">
+                <label for="edit-motto">Motto Hidup</label>
+                <textarea id="edit-motto" rows="2" required></textarea>
+              </div>
+              <div class="admin-field full-col">
+                <label for="edit-intro">Kalimat Perkenalan (Hero)</label>
+                <textarea id="edit-intro" rows="3" required></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: SOSMED -->
+          <div class="tab-pane" id="tab-sosmed">
+            <div class="admin-grid-2">
+              <div class="admin-field">
+                <label for="edit-ig-handle">Username / Handle Instagram</label>
+                <input type="text" id="edit-ig-handle" placeholder="@muhammad.firdaus">
+              </div>
+              <div class="admin-field">
+                <label for="edit-ig-url">Tautan URL Instagram</label>
+                <input type="url" id="edit-ig-url" placeholder="https://instagram.com/username">
+              </div>
+
+              <div class="admin-field">
+                <label for="edit-wa-handle">Nomor WhatsApp (Tampilan)</label>
+                <input type="text" id="edit-wa-handle" placeholder="+62 812-3456-7890">
+              </div>
+              <div class="admin-field">
+                <label for="edit-wa-number">Nomor WhatsApp untuk Chat (Hanya Angka dengan kode 62)</label>
+                <input type="text" id="edit-wa-number" placeholder="6281234567890">
+              </div>
+
+              <div class="admin-field">
+                <label for="edit-tt-handle">Handle TikTok</label>
+                <input type="text" id="edit-tt-handle" placeholder="@daus.zarr">
+              </div>
+              <div class="admin-field">
+                <label for="edit-tt-url">Tautan URL TikTok</label>
+                <input type="url" id="edit-tt-url" placeholder="https://tiktok.com/@username">
+              </div>
+
+              <div class="admin-field">
+                <label for="edit-fb-handle">Nama Profil Facebook</label>
+                <input type="text" id="edit-fb-handle" placeholder="Muhammad Firdaus">
+              </div>
+              <div class="admin-field">
+                <label for="edit-fb-url">Tautan URL Facebook</label>
+                <input type="url" id="edit-fb-url" placeholder="https://facebook.com/username">
+              </div>
+
+              <div class="admin-field">
+                <label for="edit-yt-handle">Nama Channel YouTube</label>
+                <input type="text" id="edit-yt-handle" placeholder="Danz Esport Official">
+              </div>
+              <div class="admin-field">
+                <label for="edit-yt-url">Tautan URL YouTube</label>
+                <input type="url" id="edit-yt-url" placeholder="https://youtube.com/@channel">
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: FOTO -->
+          <div class="tab-pane" id="tab-foto">
+            <div class="photo-edit-area">
+              <div class="current-avatar-preview">
+                <img src="" id="admin-avatar-preview" alt="Preview Foto Profil">
+              </div>
+              <div class="photo-controls">
+                <div class="admin-field">
+                  <label for="edit-avatar-url">URL Foto Profil (Link Gambar Langsung)</label>
+                  <input type="url" id="edit-avatar-url" placeholder="https://... atau paste link gambar">
+                </div>
+                <div class="admin-field">
+                  <label for="upload-avatar-file">Atau Unggah Foto dari Perangkat (Lokal)</label>
+                  <input type="file" id="upload-avatar-file" accept="image/*">
+                </div>
+                <div class="preset-avatars">
+                  <span>Pilihan Avatar Preset:</span>
+                  <div class="preset-thumbs">
+                    <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=400&q=80" alt="Preset 1" class="preset-btn" data-url="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=700&q=80">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Preset 2" class="preset-btn" data-url="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Preset 3" class="preset-btn" data-url="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: DATA & BACKUP -->
+          <div class="tab-pane" id="tab-data">
+            <div class="data-manage-box">
+              <h4>Manajemen Penyimpanan Biodata</h4>
+              <p>Seluruh perubahan data tersimpan secara otomatis di peramban web (LocalStorage) Anda. Anda dapat mencadangkan (ekspor) atau memuat ulang (impor) data sewaktu-waktu.</p>
+              
+              <div class="data-actions-row">
+                <button type="button" class="btn btn-outline-glow" id="btn-export-json">
+                  <i class="fa-solid fa-download"></i> Ekspor Data (JSON)
+                </button>
+                
+                <label class="btn btn-outline-glow btn-file-label">
+                  <i class="fa-solid fa-upload"></i> Impor Data (JSON)
+                  <input type="file" id="btn-import-json" accept=".json" style="display: none;">
+                </label>
+
+                <button type="button" class="btn btn-danger-glow" id="btn-reset-default">
+                  <i class="fa-solid fa-rotate-left"></i> Reset ke Biodata Asli
+                </button>
+              </div>
+
+              <div class="admin-field pin-change-field">
+                <label for="edit-admin-pin">Ubah PIN Keamanan Admin (Opsional):</label>
+                <div class="pin-change-row">
+                  <input type="password" id="edit-admin-pin" placeholder="PIN Baru (misal: 5678)" maxlength="8">
+                  <button type="button" class="btn btn-sm btn-outline-glow" id="btn-save-pin">Perbarui PIN</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBMIT ACTIONS -->
+          <div class="admin-footer-actions">
+            <span class="admin-save-status" id="admin-save-status"></span>
+            <div class="footer-btn-group">
+              <button type="button" class="btn btn-glass" id="btn-cancel-admin">Batal</button>
+              <button type="submit" class="btn btn-primary-neon">
+                <i class="fa-solid fa-floppy-disk"></i> Simpan Seluruh Perubahan
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION POPUP -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Script File -->
+  <script src="script.js"></script>
+</body>
+</html>
